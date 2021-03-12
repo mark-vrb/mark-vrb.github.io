@@ -1,13 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MVRB Homepage</title>
-</head>
-<body>
-    <h1>Hello, I am MVRB.</h1>
-    <p>This is the place for my personal page.<p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Mark Varabyou - Mark Varabyou's Portfolio
+    </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --mainColor: black;
+        --backgroundColor: white;
+        --circleDiameter: 60px;
+        --circleFontSize: 32px;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.2em;
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Open Sans", sans-serif;
+      }
+      .content {
+        padding: 5em 4em;
+        max-width: 50em;
+        margin: auto;
+      }
+      .circle {
+        display: inline-block;
+        width: var(--circleDiameter);
+        height: var(--circleDiameter);
+        line-height: var(--circleDiameter);
+        border-radius: 50%;
+        font-size: var(--circleFontSize);
+        color: var(--backgroundColor);
+        text-align: center;
+        background: var(--mainColor);
+        min-width: var(--circleDiameter);
+        transition: background-color, color 0.2s;
+        border-width: 4px;
+        border-style: solid;
+        border-color: var(--mainColor);
+      }
+      .circle:hover {
+        color: var(--mainColor);
+        background: var(--backgroundColor);
+      }
+      a {
+        text-decoration: none;
+      }
+      a.link-regular {
+        background: linear-gradient(
+          to bottom,
+          var(--mainColor) 0%,
+          var(--mainColor) 100%
+        );
+        background-position: 0 100%;
+        background-repeat: repeat-x;
+        background-size: 2px 2px;
+        color: var(--mainColor);
+        transition: background-size, color 0.2s;
+      }
+      a.link-regular:hover {
+        background-size: 100% 100%;
+        color: var(--backgroundColor);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <a href="https://mvrb.dev"><h2 class="circle">MV</h2></a>
+      <h1>Mark Varabyou</h1>
+      <p>
+        Hello, my name is Mark!
+        <br />
+        I am a Full-stack Software Engineer.
+      </p>
+      <p>
+        Contact me:
+        <a class="link-regular" href="mailto:hello@mvrb.dev">hello@mvrb.dev</a>
+      </p>
+      <p>
+        <a class="link-regular" href="https://www.linkedin.com/in/mvrb">LinkedIn</a>
+        <br />
+        <a class="link-regular" href="https://github.com/mark-vrb">GitHub</a>
+      </p>
+    </div>
+  </body>
 </html>
