@@ -23,7 +23,15 @@
         --circleDiameter: 60px;
         --circleFontSize: 32px;
       }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --mainColor: white;
+          --backgroundColor: black;
+        }
+      }
       body {
+        background-color: var(--backgroundColor);
+        color: var(--mainColor);
         font-family: "Roboto", sans-serif;
         font-size: 1.2em;
         margin: 0;
