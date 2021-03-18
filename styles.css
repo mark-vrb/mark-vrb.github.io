@@ -1,0 +1,82 @@
+:root {
+  --mainColorRgb: 0, 0, 0;
+  --backgroundColorRgb: 255, 255, 255;
+  --mainColor: rgba(var(--mainColorRgb), 1);
+  --backgroundColor: rgba(var(--backgroundColorRgb), 1);
+  --circleDiameter: 60px;
+  --circleFontSize: 32px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mainColorRgb: 255, 255, 255;
+    --backgroundColorRgb: 0, 0, 0;
+  }
+}
+body {
+  background-color: var(--backgroundColor);
+  color: var(--mainColor);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+}
+::selection {
+  background: rgba(var(--mainColorRgb), 0.3);
+}
+::-moz-selection {
+  background: rgba(var(--mainColorRgb), 0.3);
+}
+.noselect {
+  user-select: none;
+}
+.content {
+  padding: 5em 4em;
+  max-width: 50em;
+  margin: auto;
+}
+.circle {
+  display: inline-block;
+  width: var(--circleDiameter);
+  height: var(--circleDiameter);
+  line-height: var(--circleDiameter);
+  border-radius: 50%;
+  font-size: var(--circleFontSize);
+  color: var(--backgroundColor);
+  text-align: center;
+  background: var(--mainColor);
+  min-width: var(--circleDiameter);
+  transition: background-color, color 0.2s;
+  border-width: 4px;
+  border-style: solid;
+  border-color: var(--mainColor);
+}
+.circle:hover {
+  color: var(--mainColor);
+  background: var(--backgroundColor);
+}
+a {
+  text-decoration: none;
+}
+a.link-regular {
+  background: linear-gradient(
+    to bottom,
+    var(--mainColor) 0%,
+    var(--mainColor) 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  color: var(--mainColor);
+  transition: background-size, color 0.2s;
+}
+a.link-regular:hover {
+  background-size: 100% 100%;
+  color: var(--backgroundColor);
+}
