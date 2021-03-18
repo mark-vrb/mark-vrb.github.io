@@ -28,15 +28,17 @@
     <!-- end of Google Fonts setup -->
     <style>
       :root {
-        --mainColor: black;
-        --backgroundColor: white;
+        --mainColorRgb: 0, 0, 0;
+        --backgroundColorRgb: 255, 255, 255;
+        --mainColor: rgba(var(--mainColorRgb), 1);
+        --backgroundColor: rgba(var(--backgroundColorRgb), 1);
         --circleDiameter: 60px;
         --circleFontSize: 32px;
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --mainColor: white;
-          --backgroundColor: black;
+          --mainColorRgb: 255, 255, 255;
+          --backgroundColorRgb: 0, 0, 0;
         }
       }
       body {
@@ -53,6 +55,15 @@
       h5,
       h6 {
         font-family: "Open Sans", sans-serif;
+      }
+      ::selection {
+        background: rgba(var(--mainColorRgb), 0.3);
+      }
+      ::-moz-selection {
+        background: rgba(var(--mainColorRgb), 0.3);
+      }
+      .noselect {
+        user-select: none;
       }
       .content {
         padding: 5em 4em;
@@ -102,7 +113,7 @@
   </head>
   <body>
     <div class="content">
-      <a href="mailto:hello@mvrb.dev"><h2 class="circle">MV</h2></a>
+      <a class="noselect" href="mailto:hello@mvrb.dev"><h2 class="circle">MV</h2></a>
       <h1>Mark Varabyou</h1>
       <p>
         Hello, my name is Mark!
