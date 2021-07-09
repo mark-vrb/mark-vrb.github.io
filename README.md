@@ -1,3 +1,3 @@
 # MVRB.DEV
 
-Source code for my portfolio page.
+Source code for my personal page.
