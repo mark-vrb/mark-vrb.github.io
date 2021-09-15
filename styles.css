@@ -37,7 +37,7 @@ h6 {
   user-select: none;
 }
 .content {
-  padding: 5em 4em;
+  padding: 4em 4em;
   max-width: 50em;
   margin: auto;
 }
@@ -79,4 +79,21 @@ a.link-regular {
 a.link-regular:hover {
   background-size: 100% 100%;
   color: var(--backgroundColor);
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 16em;
+  height: 16em;
+}
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.text-side {
+  margin: 0 2em;
 }
